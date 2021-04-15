@@ -1,7 +1,7 @@
 # Cezerin v0.33.0 unauthorized order information manipulation
 
 ## Detail
-Cezerin is React and Node.js based eCommerce platform. The vulnerability locates at function `getValidDocumentForUpdate` in `src/api/server/services/orders/orders.js`. This function is for generating orders. However, it is found that certain internal attributes (e.g., `paid` and `tax`) in this function can be overwritten via a conflicting name from user-input. Hence, a malicious cumstoer can manipulate certain order status (i.e., payment status, tax) by adding additional attributes to user-input during checkout. 
+Cezerin is React and Node.js based eCommerce platform. The vulnerability locates at function `getValidDocumentForUpdate` in `src/api/server/services/orders/orders.js`. This function is for generating orders. However, it is found that certain internal attributes (e.g., `paid` and `tax`) in this function can be overwritten via a conflicting name from user-input. Hence, a malicious customer can manipulate certain order status (i.e., payment status, tax) by adding additional attributes to user-input during checkout. 
 
 ```
 	getValidDocumentForUpdate(id, data) {
